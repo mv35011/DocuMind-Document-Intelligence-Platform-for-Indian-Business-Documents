@@ -1,0 +1,35 @@
+app:
+  name: "DocuMind"
+  version: "0.1.0"
+  description: "Document Intelligence Platform for Indian Business Documents"
+
+ingest:
+  max_upload_mb: 20
+  max_pages: 20
+  allowed_mime_types:
+    - "application/pdf"
+    - "image/png"
+    - "image/jpeg"
+    - "image/tiff"
+  render_dpi: 200
+
+preprocess:
+  deskew: true
+  denoise: true
+  clahe: true
+
+ocr:
+  default_engine: "tesseract"
+  tesseract_lang: "eng"
+  paddle_lang: "en"
+
+extraction:
+  default_backend: "stub"
+  max_repair_retries: 1
+  auto_approve_threshold: 0.88
+
+vector_store:
+  collection_name: "documind_documents"
+  dense_model: "BAAI/bge-small-en-v1.5"
+  chunk_size_tokens: 300
+  chunk_overlap_tokens: 50

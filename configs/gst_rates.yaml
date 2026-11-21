@@ -1,0 +1,12 @@
+# Standard GST rate slabs in India (in percentage)
+# Config-driven to allow slab revisions without hardcoding
+allowed_rates:
+  - 0.0
+  - 0.25
+  - 3.0
+  - 5.0
+  - 12.0
+  - 18.0
+  - 28.0
+  - 40.0
+tolerance_amount: 1.00

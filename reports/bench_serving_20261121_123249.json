@@ -1,0 +1,29 @@
+{
+  "endpoint": "http://localhost:8000/v1",
+  "tiers": [
+    {
+      "concurrency": 1,
+      "total_requests": 16,
+      "throughput_pages_per_min": 1171.3,
+      "latency_p50_ms": 51.1,
+      "latency_p95_ms": 51.3,
+      "error_rate": 0.0
+    },
+    {
+      "concurrency": 4,
+      "total_requests": 16,
+      "throughput_pages_per_min": 4670.4,
+      "latency_p50_ms": 51.2,
+      "latency_p95_ms": 51.3,
+      "error_rate": 0.0
+    },
+    {
+      "concurrency": 8,
+      "total_requests": 32,
+      "throughput_pages_per_min": 8643.0,
+      "latency_p50_ms": 51.2,
+      "latency_p95_ms": 61.0,
+      "error_rate": 0.0
+    }
+  ]
+}

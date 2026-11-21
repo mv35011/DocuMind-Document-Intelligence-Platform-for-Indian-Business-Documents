@@ -1,0 +1,6 @@
+{
+  "total_queries": 50,
+  "refusal_accuracy_pct": 100.0,
+  "adversarial_blocked": 5,
+  "sql_guard_tests_passed": true
+}

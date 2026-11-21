@@ -1,0 +1,35 @@
+{
+  "annotations": { "list": [] },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 1,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "title": "Throughput (Documents Processed / sec)",
+      "type": "timeseries",
+      "datasource": "Prometheus",
+      "targets": [{ "expr": "rate(documind_documents_processed_total[1m])" }]
+    },
+    {
+      "title": "P95 Stage Latency (Seconds)",
+      "type": "timeseries",
+      "datasource": "Prometheus",
+      "targets": [{ "expr": "histogram_quantile(0.95, rate(documind_stage_duration_seconds_bucket[5m]))" }]
+    },
+    {
+      "title": "Human Review Queue Depth",
+      "type": "gauge",
+      "datasource": "Prometheus",
+      "targets": [{ "expr": "documind_review_queue_size" }]
+    }
+  ],
+  "refresh": "5s",
+  "schemaVersion": 38,
+  "style": "dark",
+  "tags": ["documind", "mlops"],
+  "time": { "from": "now-1h", "to": "now" },
+  "title": "DocuMind Pipeline Health & MLOps"
+}
